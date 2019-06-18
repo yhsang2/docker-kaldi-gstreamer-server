@@ -42,8 +42,7 @@ https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet
 
 너의 환경은? (Your Setting)
 --------------
-- OS : UBUNTU 18.04
-(당신이 이 분야에 경험이 많다면, 윈도우 파워쉘이나 vmware 따위는 사용하지 않을 것입니다.)
+- OS : UBUNTU 18.04 (윈도우 파워쉘이나 vmware는 사용하지 마세요. GPU나 마이크 안 잡힙니다.)
 - PYTHON : 2.7 (version)
 
 도커를 설치해봅시다.
