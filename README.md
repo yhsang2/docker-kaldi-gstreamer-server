@@ -15,7 +15,7 @@
 
 이 프로젝트는 선행학습이 필요합니다 :)
 ---------
-1. 이 도커파일은 자동적으로 노예(worker)와 주인(master)서버를 구축합니다. 그것에 대한 자세한 설명은 하단에서 찾을 수 있습니다.
+1. 이 도커파일은 자동적으로 노예(worker)와 주인(master)서버를 구축합니다. 그것이 무엇인지 확인해보세요.
 - http://ebooks.iospress.nl/volumearticle/37996
 - https://github.com/alumae/kaldi-gstreamer-server
 
