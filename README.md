@@ -28,13 +28,13 @@
 칼디 모델과 그 칼디 모델을 설명하는 yaml 파일입니다.
 
 아래의 경로에서 예제, 칼디 모델을 다운로드 받고 이것이 무엇인지 감을 잡아보세요.
-https://phon.ioc.ee/~tanela/tedlium_nnet_ms_sp_online.tgz
+- https://phon.ioc.ee/~tanela/tedlium_nnet_ms_sp_online.tgz
 (tip : 이것은 영어 칼디 모델입니다.) 
 
 아래의 경로에서 yaml 예제를 확인함으로써 그것들이 무엇인지 감을 잡아보세요.
-https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_worker.yaml
-https://github.com/alumae/kaldi-gstreamer-server/blob/master/estonian_worker.yaml
-https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml
+- https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_worker.yaml
+- https://github.com/alumae/kaldi-gstreamer-server/blob/master/estonian_worker.yaml
+- https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml
 그리고 당신만의 yaml 파일을 작성하는 방법을 공부해보세요.
 
 모든 준비가 끝났습니다. 
@@ -42,7 +42,7 @@ https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet
 
 너의 환경은? (Your Setting)
 --------------
-- OS : UBUNTU 18.04 (윈도우 파워쉘이나 vmware는 사용하지 마세요. GPU나 마이크 안 잡힙니다.)
+- OS : UBUNTU 18.04 (윈도우 파워쉘이나 vmware는 사용하지 마세요. GPU나 마이크 잡으실 때 고생하십니다.)
 - PYTHON : 2.7 (version)
 
 도커를 설치해봅시다.
