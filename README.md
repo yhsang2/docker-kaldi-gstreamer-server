@@ -8,8 +8,12 @@
 
 구체적으로 무엇이 가능한지?(PROPOSE)
 --------
+1. 로컬테스트
+로컬에서 음성파일을 스트림 서버에 전송하면 말길을 알아듣고 해석을 시작합니다.
+
+2. 운영테스트
 jQuery Ajax를 통해서 음성파일의 경로를 칼디-스트림-서버에 전송하면
-JSON형식으로 그것을 해석한 것을 받을 수 있습니다.
+JSON형식으로 해석한 것을 받을 수 있습니다. (현재 점검 중...)
 
 이 프로젝트는 선행학습이 필요합니다 :)
 ---------
@@ -19,24 +23,36 @@ JSON형식으로 그것을 해석한 것을 받을 수 있습니다.
 http://ebooks.iospress.nl/volumearticle/37996
 https://github.com/alumae/kaldi-gstreamer-server
 
-2. https://github.com/kaldi-asr/kaldi 에서 yesno혹은 voxforge 등의 세팅과 데모 구동을 체험하세요.
+2. https://github.com/kaldi-asr/kaldi 에서 yesno혹은 voxforge 등의 세팅과 데모 구동을 "반드시" 체험하세요.
 
 중요한 내용입니다. 집중하세요
 ---------
-3. 제가 설명드릴 "도커 이미지" 안에는 칼디 모델이 존재하지 않습니다.
+이 프로젝트를 실행하기 위해선 두 가지가 필요합니다.
+칼디 모델과 그 칼디 모델을 설명하는 yaml 파일입니다.
 
-You must have these models on your machine. You must also have an yaml file describing these models. Please, check some examples [here](https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_worker.yaml), [here](https://github.com/alumae/kaldi-gstreamer-server/blob/master/estonian_worker.yaml) and [here](https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml) to find out how to write your own yaml files.
+아래의 경로에서 예제, 칼디 모델을 다운로드 받고 이것이 무엇인지 감을 잡아보세요.
+https://phon.ioc.ee/~tanela/tedlium_nnet_ms_sp_online.tgz
+(tip : 이것은 영어 칼디 모델입니다.) 
 
-There are some kaldi models available for download. I have tested my setup with this [one](https://phon.ioc.ee/~tanela/tedlium_nnet_ms_sp_online.tgz), which is for English. I'm trying to build a model for Brazilian Portuguese, but until now I didn't find enough free/open resources.
+아래의 경로에서 yaml 예제를 확인함으로써 그것들이 무엇인지 감을 잡아보세요.
+https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_worker.yaml
+https://github.com/alumae/kaldi-gstreamer-server/blob/master/estonian_worker.yaml
+https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml
+그리고 당신만의 yaml 파일을 작성하는 방법을 공부해보세요.
 
+모든 준비가 끝났습니다. 
+이제 프로젝트를 본격적으로 설치하고 데모를 구동시킬 시간입니다.
 
-Install docker
+너의 환경은? (Your Setting)
 --------------
+OS : UBUNTU 18.04
+PYTHON : 2.7 (version)
 
+도커를 설치해봅시다.
+--------------
 Please, refer to https://docs.docker.com/engine/installation/.
 
-
-Get the image
+이미지를 얻어봅시다.
 -------------
 
 * Pull the image from Docker Hub (~ 900MB):
@@ -49,10 +65,8 @@ Get the image
 
 In the next sections I'll assume you pulled the image from Docker Hub. If you have built your own image, simply change *jcsilva/docker-kaldi-gstreamer-server:latest* by your image name when appropriate.
 
-
-How to use
+사용방법
 ----------
-
 It's possible to use the same docker in two scenarios. You may create the master and worker on the same host machine. Or you can create just a worker and connect it to an already existing master. These two situations are explained below. 
 
 * Instantiate master server and worker server on the same machine:
@@ -99,7 +113,7 @@ For stopping the worker server, you may execute the following command inside you
  /opt/stop.sh
 ```
 
-Testing
+테스트 방법
 -------
 
 First of all, please, check if your setup is ok. It can be done using your browser following these steps:
@@ -129,11 +143,9 @@ After checking the setup, you should test your speech recognition service. For t
 &nbsp;
 <img src="img/6.png" alt="Kõnele configuration" width="200px"/>
 
-
 3. A Javascript client is available at http://kaljurand.github.io/dictate.js/. You must configure it to use your ASR service.
 
-
-Practical Example
+실용적인 예제
 -----------------
 
 This section describes a tested example. You may repeat all the steps and, in the end, you'll have an english ASR system working on your machine. For this example, I advise you to use a machine with at least 4GB RAM.
@@ -189,14 +201,15 @@ and i was a kid the disaster we worry about most was a nuclear war. that's why w
 
 mr coulter is the apostle of the middle classes and we're glad to welcome his gospel.
 
-Credits
+제작진 (Credits)
 --------
 * [kaldi](http://www.kaldi.org)
 * [gst-kaldi-nnet2-online](https://github.com/alumae/gst-kaldi-nnet2-online)
 * [kaldi-gstreamer-server](https://github.com/alumae/kaldi-gstreamer-server)
 * [Kõnele](http://kaljurand.github.io/K6nele/)
 
-# docker-kaldi-gstreamer-server
+참조 (reference)
+--------
 이 프로젝트의 원본은 다음과 같습니다.
 https://github.com/alumae/kaldi-gstreamer-server
 https://github.com/jcsilva/docker-kaldi-gstreamer-server
