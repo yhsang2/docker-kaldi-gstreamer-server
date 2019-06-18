@@ -8,18 +8,14 @@
 
 구체적으로 무엇이 가능한지?(PROPOSE)
 --------
-1. 로컬테스트 : 
+1. 로컬에서 음성파일을 스트림 서버에 전송하면 말길을 알아듣고 해석을 시작합니다.
 
-로컬에서 음성파일을 스트림 서버에 전송하면 말길을 알아듣고 해석을 시작합니다.
-
-2. 운영테스트 : 
-
-jQuery Ajax를 통해서 음성파일의 경로를 칼디-스트림-서버에 전송하면 JSON형식으로 해석한 것을 받을 수 있습니다. (현재 점검 중...)
+2. jQuery Ajax를 통해서 음성파일의 경로를 칼디-스트림-서버에 전송하면 JSON형식으로 해석한 것을 받을 수 있습니다. (현재 점검 중...)
 
 이 프로젝트는 선행학습이 필요합니다 :)
 ---------
 1. 이 도커파일은 자동적으로 노예(worker)와 주인(master)서버를 구축합니다. 그것에 대한 자세한 설명은 하단에서 찾을 수 있습니다.
-[Full-duplex Speech-to-text System for Estonian]
+
 http://ebooks.iospress.nl/volumearticle/37996
 https://github.com/alumae/kaldi-gstreamer-server
 
