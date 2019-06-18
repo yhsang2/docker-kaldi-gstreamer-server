@@ -1,32 +1,32 @@
-# docker-kaldi-gstreamer-server
-이 프로젝트의 원본은 다음과 같습니다.
-Dockerfile for [kaldi-gstreamer-server](https://github.com/alumae/kaldi-gstreamer-server).
-
-시놉시스(요약본)
+인사말(THE HELL WORLD!)
 --------
-이것은 우분투 도커를 통해서 칼디 스트림 서버를 구축하기 위한 깃허브 프로젝트입니다.
-
-ajax를 통해서 음성파일의 경로를 칼디 스트림 서버에 전송하면
-JSON형식으로 그것을 해석한 것을 받는 것을 목표로 하고 있습니다.
-(즉, 최종적으로 REST API를 구축하는 것을 목표로 하고 있습니다.)
-
-이 도커파일은 자동적으로 노예(worker)와 주인(master)서버를 구축합니다. 
-그것에 대한 자세한 설명은 하단에서 찾을 수 있습니다.
-[Full-duplex Speech-to-text System for Estonian]
-http://ebooks.iospress.nl/volumearticle/37996
-https://github.com/alumae/kaldi-gstreamer-server.
-
-이 프로젝트를 잘 만들어져있습니다. 
+안녕하세요. 이사작전.com의 개발자 플랫폼공작소입니다.
+이 프로젝트를 잘 만들어져있습니다.
 만약 당신이 이 프로젝트를 이용한다면, 당신은 말길을 알아먹는 서버(ASR)를 5분 만에 동작시킬 수 있을 것입니다.
 (ASR, AUTOMATIC SPEECH RECOGNITION)
 
-이것은 중요한 내용입니다. 집중하세욧.
+프로젝트 목표(GOAL)
+--------
+이것은 도커를 이용하여 실시간 + 대용량 전송량을 처리할 수 있는 칼디-스트림-서버(+REST API)를 구축함을 목표로 합니다.
+
+구체적으로 무엇이 가능한지?(PROPOSE)
+--------
+jQuery Ajax를 통해서 음성파일의 경로를 칼디-스트림-서버에 전송하면
+JSON형식으로 그것을 해석한 것을 받을 수 있습니다.
+
+이 프로젝트는 선행학습이 필요합니다 :)
 ---------
+1. 이 도커파일은 자동적으로 노예(worker)와 주인(master)서버를 구축합니다. 
+그것에 대한 자세한 설명은 하단에서 찾을 수 있습니다.
+[Full-duplex Speech-to-text System for Estonian]
+http://ebooks.iospress.nl/volumearticle/37996
+https://github.com/alumae/kaldi-gstreamer-server
 
-이 말길을 알아먹는 서버 세팅은 http://www.kaldi.org
-칼디 모델은 포함되어 있지 않습니다.
+2. https://github.com/kaldi-asr/kaldi 에서 yesno혹은 voxforge 등의 세팅과 데모 구동을 체험하세요.
 
-The ASR server that will be set up here requires some [kaldi models](http://www.kaldi.org). In the docker image I will detail below, there are no kaldi models included.
+중요한 내용입니다. 집중하세요
+---------
+3. 제가 설명드릴 "도커 이미지" 안에는 칼디 모델이 존재하지 않습니다.
 
 You must have these models on your machine. You must also have an yaml file describing these models. Please, check some examples [here](https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_worker.yaml), [here](https://github.com/alumae/kaldi-gstreamer-server/blob/master/estonian_worker.yaml) and [here](https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml) to find out how to write your own yaml files.
 
@@ -198,3 +198,8 @@ Credits
 * [gst-kaldi-nnet2-online](https://github.com/alumae/gst-kaldi-nnet2-online)
 * [kaldi-gstreamer-server](https://github.com/alumae/kaldi-gstreamer-server)
 * [Kõnele](http://kaljurand.github.io/K6nele/)
+
+# docker-kaldi-gstreamer-server
+이 프로젝트의 원본은 다음과 같습니다.
+https://github.com/alumae/kaldi-gstreamer-server
+https://github.com/jcsilva/docker-kaldi-gstreamer-server
