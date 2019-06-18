@@ -197,15 +197,15 @@ and i was a kid the disaster we worry about most was a nuclear war. that's why w
 
 mr coulter is the apostle of the middle classes and we're glad to welcome his gospel.
 
-제작진 (Credits)
+참조 (Reference & Credits)
 --------
 * [kaldi](http://www.kaldi.org)
 * [gst-kaldi-nnet2-online](https://github.com/alumae/gst-kaldi-nnet2-online)
 * [kaldi-gstreamer-server](https://github.com/alumae/kaldi-gstreamer-server)
 * [Kõnele](http://kaljurand.github.io/K6nele/)
 
-참조 (reference)
+프로젝트 원본 (ORIGINAL)
 --------
 이 프로젝트의 원본은 다음과 같습니다.
-https://github.com/alumae/kaldi-gstreamer-server
-https://github.com/jcsilva/docker-kaldi-gstreamer-server
+- https://github.com/alumae/kaldi-gstreamer-server
+- https://github.com/jcsilva/docker-kaldi-gstreamer-server
