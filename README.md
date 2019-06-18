@@ -1,14 +1,19 @@
 # docker-kaldi-gstreamer-server
 Dockerfile for [kaldi-gstreamer-server](https://github.com/alumae/kaldi-gstreamer-server).
 
-Synopsis
+시놉시스(요약본)
 --------
+이 도커파일은 자동적으로 노예(worker)와 주인(master)서버를 구축합니다. 
+그것에 대한 자세한 설명은 하단에서 찾을 수 있습니다.
+[Full-duplex Speech-to-text System for Estonian]
+http://ebooks.iospress.nl/volumearticle/37996
+https://github.com/alumae/kaldi-gstreamer-server.
 
-This dockerfile automatically builds master and worker servers that are explained at [Full-duplex Speech-to-text System for Estonian](http://ebooks.iospress.nl/volumearticle/37996) from Tanel Alumäe and implemented by himself at https://github.com/alumae/kaldi-gstreamer-server.
+이 프로젝트를 잘 만들어져있습니다. 
+만약 당신이 이 프로젝트를 이용한다면, 당신은 말길을 알아먹는 서버를 5분 만에 동작시킬 수 있을 것입니다.
+(ASR, AUTOMATIC SPEECH RECOGNITION)
 
-Using this project you will be able to run an automatic speech recognition (ASR) server in a few minutes.
-
-Attention
+집중하세요
 ---------
 
 The ASR server that will be set up here requires some [kaldi models](http://www.kaldi.org). In the docker image I will detail below, there are no kaldi models included.
