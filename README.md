@@ -1,6 +1,8 @@
 인사말(HELLO WORLD)
 --------
-안녕하세요. 이사작전.com의 개발자 플랫폼공작소입니다. 만약 당신이 이 프로젝트를 이용한다면, 당신은 말길을 알아먹는 서버(ASR)를 5분 만에 동작시킬 수 있을 것입니다. 물론 이게 왜 동작하는지 이해하기 위해서는 선행학습이 좀 필요하지만요. (ASR, AUTOMATIC SPEECH RECOGNITION)
+안녕하세요. 이사작전.com의 개발자 플랫폼공작소입니다. 이 프로젝트는 안정적입니다. 만약 당신이 이 프로젝트를 이용한다면, 당신은 말길을 알아먹는 서버(ASR)를 5분 만에 동작시킬 수 있을 것입니다. 물론 이게 왜 동작하는지 이해하기 위해서는 선행학습이 좀 필요하지만요. (ASR, AUTOMATIC SPEECH RECOGNITION)
+
+궁금한 것이 있다면 언제든 질문 남겨주세요.
 
 프로젝트 목표(GOAL)
 --------
@@ -35,7 +37,7 @@
 - https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_worker.yaml
 - https://github.com/alumae/kaldi-gstreamer-server/blob/master/estonian_worker.yaml
 - https://github.com/alumae/kaldi-gstreamer-server/blob/master/sample_english_nnet2.yaml
-그리고 당신만의 yaml 파일을 작성하는 방법을 공부해보세요.
+- 그리고 당신만의 yaml 파일을 작성하는 방법을 공부해보세요.
 
 모든 준비가 끝났습니다. 
 이제 프로젝트를 본격적으로 설치하고 데모를 구동시킬 시간입니다.
